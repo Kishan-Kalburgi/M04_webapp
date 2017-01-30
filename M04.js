@@ -99,8 +99,7 @@ var App = {
     let ct;
     if (area < 1) { ct = 0; }
     else { ct = area }; // estimate 1 per square mile
-    // document.getElementById("count").innerHTML = count;
-    $("#count").html(ct);
+    document.getElementById("count").innerHTML = ct;
     alert("You could have about " + ct + " sheep.");
     $("#count").css("color", "blue");
     $("#count").css("background-color", "yellow");
