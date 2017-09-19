@@ -122,7 +122,7 @@ var App = {
     imageElement.style.maxWidth = "90px";
     //changed here
     var displayElement = $("#displayPlace");
-    displayElement.appendChild(imageElement);
+    displayElement.append(imageElement);
     //changed here
     $("#image" + icount).attr("src", "59-images-of-baby-lamb-clipart-you-can-use-these-free-cliparts-for-sEfudv-clipart.jpg");
   },
