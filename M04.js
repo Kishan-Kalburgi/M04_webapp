@@ -94,18 +94,22 @@ var App = {
     // return the result of our calculation to the calling function
     return area;
   },
+  
   getEstimate: function () {
-    let area = parseFloat(document.getElementById("area").innerHTML);
+    //changed here
+    let area = parseFloat($("#area").html());
     let ct;
     if (area < 1) { ct = 0; }
     else { ct = area }; // estimate 1 per square mile
-    document.getElementById("count").innerHTML = ct;
+    //changed here
+    $("#count").html(ct);
     alert("You could have about " + ct + " sheep.");
     $("#count").css("color", "blue");
     $("#count").css("background-color", "yellow");
   },
   showExample: function () {
-    document.getElementById("displayPlace").innerHTML = "";
+    //changed here
+    $("#displayPlace").html();
     let totalCount = parseFloat($("#count").html());
     for (var i = 0; i < totalCount; i++) {
       App.addImage(i);
@@ -116,9 +120,11 @@ var App = {
     imageElement.id = "image" + icount;
     imageElement.class = "picture";
     imageElement.style.maxWidth = "90px";
-    var displayElement = document.getElementById("displayPlace");
+    //changed here
+    var displayElement = $("#displayPlace");
     displayElement.appendChild(imageElement);
-    document.getElementById("image" + icount).src = "59-images-of-baby-lamb-clipart-you-can-use-these-free-cliparts-for-sEfudv-clipart.jpg";
+    //changed here
+    $("#image" + icount).attr("src", "59-images-of-baby-lamb-clipart-you-can-use-these-free-cliparts-for-sEfudv-clipart.jpg");
   },
   displayExploreButtons: function () {
     $(".displayExploreButtons").css('display', 'block');  //overwrites display: hidden to make it visible 
